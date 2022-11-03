@@ -1,0 +1,335 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$white: #ffffff;
+$pink: #FC8BC0;
+$red: #F85C70;
+$hoverIcon: #969696;
+$colorFontNav: #1b1b1b;
+
+// Section Hero
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url(/img/header.jpg);
+    background-repeat: no-repeat;background-size: cover;
+
+    .containerHero {
+        margin: 0 10rem;
+
+        .social {
+            padding-top: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+        }
+        i {
+            color: $white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all .3s ease-in;
+    
+            &:hover {
+                color: $hoverIcon;
+            }
+        }
+
+        .heroText {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 40%;
+            color: $white;
+
+            h3 {
+                font-size: 3.2rem;
+            }
+            h1 {
+                color: #cfcfcf;
+                font-size: 6rem;
+                font-weight: 700;
+                line-height: 0.8;
+           }
+           h5 {
+                font-size: 1.5rem;
+           }
+           .button {
+            padding: .8rem;
+            width: 9.5rem;
+            border-radius: 100px;
+            margin-top: 2rem;
+            cursor: pointer;
+            background-color: $red;
+            transition: all .3s ease-in;
+
+            &:hover {
+                background-color: #ff3a54;
+            }
+
+            div i {
+                padding-right: .2rem;
+                font-size: 1.3rem;
+            }
+           }
+        } 
+    }
+}
+
+// Section Nav
+.navBar {
+    width: 100%;
+    height: 4.5rem;
+    position: sticky;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px;
+
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10rem;
+
+        .leftMenu {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: $colorFontNav;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        a.active {
+            color: $red;
+        }
+
+        .profileImage {
+            position: relative;
+            top: -1.9rem;
+            z-index: 1;
+
+            .imgeRouded {
+                background-color: $white;
+            }
+            img {
+                border: .5rem solid $white;
+                border-radius: 50%;
+                width: 10rem;
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            }
+
+            .profileName {
+                text-align: center;
+                color: $colorFontNav;
+                display: none;
+            }
+            .name {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+            .job {
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+
+        }
+
+        .rightMenu {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+// Section About
+.about {
+    width: 100%;
+    height: 30rem;
+
+    .aboutContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .aboutCard {
+            border: 1px solid #dee2e6;
+            padding: 4rem;
+
+            .headerAbout {
+               margin: 2rem 0 3.5rem 0;
+
+               h1 span {
+                    border-bottom: 3px solid #ff3a54;
+                    padding-bottom: .5rem;
+               }
+               h1 {
+                    font-size: 1.8rem;
+               }
+            }
+            .content {      
+                h3 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    padding: .5rem 0;
+                    color: #666666;
+                }
+           }
+            .button {
+                padding: .8rem;
+                border: 1px solid $red;
+                border-radius: .5rem;
+                width: 9.5rem;
+                cursor: pointer;
+                color: $red;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background-color: $red;
+                    color: $white;
+                }
+           }
+
+           .info {
+                list-style: none;
+
+                li {
+                    margin-bottom: 1rem;
+                    color: #6d6d6d;
+                }
+                li span {
+                    color: black;
+                    font-weight: 700;
+                }
+           }
+           .social {
+                display: flex;
+                gap: 1rem;
+                margin-top: 3rem;
+
+                i {
+                    font-size: 1.2rem;
+                    color: $red;
+                    cursor: pointer;
+                }
+           }
+
+           .expertiseContent {
+                display: flex;
+
+                .expertIcon {
+                    margin-top: .5rem;
+                    padding-right: 2.5rem;
+                }
+                i {
+                    font-size: 2rem;
+                    color: $red;
+                }
+                .expertText {
+                    margin-bottom: 1.6rem;
+                    border-bottom: 1px solid #aaaaaa;
+
+                    h3 {
+                        color: black;
+                        font-size: 1.2rem;
+                    }
+                    h5 {
+                        color: #6d6d6d;
+                        font-size: 1rem;
+                        padding-right: 3rem;
+                        margin-bottom: 1.2rem;
+                    }
+                }
+           }
+        }
+    }
+}
+
+// Section Resume
+.resume {
+    margin-top: 10rem;
+
+    .resumeContainer {
+        margin: 0 8rem;
+
+        .headerResume {
+            margin-bottom: 2rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+            h1 span {
+                color: $red;
+            }
+        }
+
+        .resumeCard {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+
+            .contentResume {
+
+                .card {
+                    padding: 1rem;
+                    border: 1px solid #dee2e6;
+                    margin-bottom: 2rem;
+
+                    .headerContent {
+                        margin-bottom: 2rem;
+
+                        h3 {
+                            font-size: 1.5rem;   
+                        }
+                        h3 span {
+                            border-bottom: 2px solid $red;
+                            padding-bottom: .5rem;
+                        }
+                    }
+
+                    .resumeText {
+
+                        h3 {
+                            color: $red;
+                            font-size: 1.3rem;
+                        }
+                        h5 {
+                            color: #6d6d6d;
+                            font-size: .8rem;
+                            margin-bottom: 1rem;
+                        }
+                        p {
+                            color: #6d6d6d;
+                        }
+                    }
+
+                    .skills {
+
+                        .skillProgress {
+                            margin-bottom: .5rem;
+
+                            h3 {
+                                font-size: 1.2rem;
+                                color: #6d6d6d;
+                            }
+                            .progress {
+                                height: 5px;
+                                background-color: $red;
+                                width: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

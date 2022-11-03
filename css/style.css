@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url(/img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .hero .containerHero {
+    margin: 0 10rem; }
+    .hero .containerHero .social {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5rem; }
+    .hero .containerHero i {
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all .3s ease-in; }
+      .hero .containerHero i:hover {
+        color: #969696; }
+    .hero .containerHero .heroText {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 40%;
+      color: #ffffff; }
+      .hero .containerHero .heroText h3 {
+        font-size: 3.2rem; }
+      .hero .containerHero .heroText h1 {
+        color: #cfcfcf;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 0.8; }
+      .hero .containerHero .heroText h5 {
+        font-size: 1.5rem; }
+      .hero .containerHero .heroText .button {
+        padding: .8rem;
+        width: 9.5rem;
+        border-radius: 100px;
+        margin-top: 2rem;
+        cursor: pointer;
+        background-color: #F85C70;
+        transition: all .3s ease-in; }
+        .hero .containerHero .heroText .button:hover {
+          background-color: #ff3a54; }
+        .hero .containerHero .heroText .button div i {
+          padding-right: .2rem;
+          font-size: 1.3rem; }
+
+.navBar {
+  width: 100%;
+  height: 4.5rem;
+  position: sticky;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px; }
+  .navBar .navContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10rem; }
+    .navBar .navContainer .leftMenu {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      margin-top: 1.5rem; }
+    .navBar .navContainer li {
+      list-style: none; }
+    .navBar .navContainer a {
+      text-decoration: none;
+      color: #1b1b1b;
+      font-size: 1rem;
+      font-weight: 700; }
+    .navBar .navContainer a.active {
+      color: #F85C70; }
+    .navBar .navContainer .profileImage {
+      position: relative;
+      top: -1.9rem;
+      z-index: 1; }
+      .navBar .navContainer .profileImage .imgeRouded {
+        background-color: #ffffff; }
+      .navBar .navContainer .profileImage img {
+        border: 0.5rem solid #ffffff;
+        border-radius: 50%;
+        width: 10rem;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; }
+      .navBar .navContainer .profileImage .profileName {
+        text-align: center;
+        color: #1b1b1b;
+        display: none; }
+      .navBar .navContainer .profileImage .name {
+        font-size: 1.8rem;
+        font-weight: 500; }
+      .navBar .navContainer .profileImage .job {
+        font-size: 1.3rem;
+        font-weight: 300; }
+    .navBar .navContainer .rightMenu {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      margin-top: 1.5rem; }
+
+.about {
+  width: 100%;
+  height: 30rem; }
+  .about .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .about .aboutContainer .aboutCard {
+      border: 1px solid #dee2e6;
+      padding: 4rem; }
+      .about .aboutContainer .aboutCard .headerAbout {
+        margin: 2rem 0 3.5rem 0; }
+        .about .aboutContainer .aboutCard .headerAbout h1 span {
+          border-bottom: 3px solid #ff3a54;
+          padding-bottom: .5rem; }
+        .about .aboutContainer .aboutCard .headerAbout h1 {
+          font-size: 1.8rem; }
+      .about .aboutContainer .aboutCard .content h3 {
+        font-size: 1.5rem; }
+      .about .aboutContainer .aboutCard .content p {
+        padding: .5rem 0;
+        color: #666666; }
+      .about .aboutContainer .aboutCard .button {
+        padding: .8rem;
+        border: 1px solid #F85C70;
+        border-radius: .5rem;
+        width: 9.5rem;
+        cursor: pointer;
+        color: #F85C70;
+        transition: all .3s ease-in-out; }
+        .about .aboutContainer .aboutCard .button:hover {
+          background-color: #F85C70;
+          color: #ffffff; }
+      .about .aboutContainer .aboutCard .info {
+        list-style: none; }
+        .about .aboutContainer .aboutCard .info li {
+          margin-bottom: 1rem;
+          color: #6d6d6d; }
+        .about .aboutContainer .aboutCard .info li span {
+          color: black;
+          font-weight: 700; }
+      .about .aboutContainer .aboutCard .social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 3rem; }
+        .about .aboutContainer .aboutCard .social i {
+          font-size: 1.2rem;
+          color: #F85C70;
+          cursor: pointer; }
+      .about .aboutContainer .aboutCard .expertiseContent {
+        display: flex; }
+        .about .aboutContainer .aboutCard .expertiseContent .expertIcon {
+          margin-top: .5rem;
+          padding-right: 2.5rem; }
+        .about .aboutContainer .aboutCard .expertiseContent i {
+          font-size: 2rem;
+          color: #F85C70; }
+        .about .aboutContainer .aboutCard .expertiseContent .expertText {
+          margin-bottom: 1.6rem;
+          border-bottom: 1px solid #aaaaaa; }
+          .about .aboutContainer .aboutCard .expertiseContent .expertText h3 {
+            color: black;
+            font-size: 1.2rem; }
+          .about .aboutContainer .aboutCard .expertiseContent .expertText h5 {
+            color: #6d6d6d;
+            font-size: 1rem;
+            padding-right: 3rem;
+            margin-bottom: 1.2rem; }
+
+.resume {
+  margin-top: 10rem; }
+  .resume .resumeContainer {
+    margin: 0 8rem; }
+    .resume .resumeContainer .headerResume {
+      margin-bottom: 2rem; }
+      .resume .resumeContainer .headerResume h1 {
+        font-size: 2rem; }
+      .resume .resumeContainer .headerResume h1 span {
+        color: #F85C70; }
+    .resume .resumeContainer .resumeCard {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem; }
+      .resume .resumeContainer .resumeCard .contentResume .card {
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        margin-bottom: 2rem; }
+        .resume .resumeContainer .resumeCard .contentResume .card .headerContent {
+          margin-bottom: 2rem; }
+          .resume .resumeContainer .resumeCard .contentResume .card .headerContent h3 {
+            font-size: 1.5rem; }
+          .resume .resumeContainer .resumeCard .contentResume .card .headerContent h3 span {
+            border-bottom: 2px solid #F85C70;
+            padding-bottom: .5rem; }
+        .resume .resumeContainer .resumeCard .contentResume .card .resumeText h3 {
+          color: #F85C70;
+          font-size: 1.3rem; }
+        .resume .resumeContainer .resumeCard .contentResume .card .resumeText h5 {
+          color: #6d6d6d;
+          font-size: .8rem;
+          margin-bottom: 1rem; }
+        .resume .resumeContainer .resumeCard .contentResume .card .resumeText p {
+          color: #6d6d6d; }
+        .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress {
+          margin-bottom: .5rem; }
+          .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress h3 {
+            font-size: 1.2rem;
+            color: #6d6d6d; }
+          .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress .progress {
+            height: 5px;
+            background-color: #F85C70;
+            width: 95%; }
