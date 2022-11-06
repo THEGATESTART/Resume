@@ -206,12 +206,164 @@
           margin-bottom: 1rem; }
         .resume .resumeContainer .resumeCard .contentResume .card .resumeText p {
           color: #6d6d6d; }
-        .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress {
-          margin-bottom: .5rem; }
-          .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress h3 {
-            font-size: 1.2rem;
-            color: #6d6d6d; }
-          .resume .resumeContainer .resumeCard .contentResume .card .skills .skillProgress .progress {
+        .resume .resumeContainer .resumeCard .contentResume .card .skills .subject h3 {
+          font-size: 1.2rem;
+          color: #6d6d6d; }
+        .resume .resumeContainer .resumeCard .contentResume .card .skills .progress {
+          margin-bottom: .5rem;
+          height: 5px; }
+          .resume .resumeContainer .resumeCard .contentResume .card .skills .progress .progress-bar {
             height: 5px;
             background-color: #F85C70;
             width: 95%; }
+
+.achievement {
+  background-color: #1b1b1b;
+  width: 100%;
+  height: auto;
+  margin: 4rem 0; }
+  .achievement .achievementContain {
+    margin: 0 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .achievement .achieveCard {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .achievement .achieveCard .achieveIcon {
+      padding: 2rem 0; }
+      .achievement .achieveCard .achieveIcon i {
+        color: #ffffff;
+        font-size: 5rem;
+        border-right: 1px solid #ffffff;
+        padding: 2rem 0;
+        padding-right: 1.5rem; }
+    .achievement .achieveCard .achieveTotal {
+      margin-left: 1.5rem; }
+      .achievement .achieveCard .achieveTotal h1 {
+        color: #F85C70;
+        margin-bottom: .5rem; }
+      .achievement .achieveCard .achieveTotal p {
+        color: #b4b4b4; }
+
+.services {
+  margin: 0 8rem; }
+  .services .headerServices {
+    margin-bottom: 4.5rem; }
+    .services .headerServices h1 {
+      font-size: 2rem; }
+    .services .headerServices h1 span {
+      color: #F85C70; }
+  .services .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem; }
+    .services .container .servicesCard {
+      position: relative;
+      padding: 1.5rem 2rem 1.5rem 1.5rem;
+      border: 1px solid #acacac;
+      margin-bottom: 2rem; }
+      .services .container .servicesCard .iconServices {
+        position: absolute;
+        top: -1.5rem;
+        background-color: #ffffff;
+        padding: .5rem; }
+        .services .container .servicesCard .iconServices i {
+          font-size: 2rem;
+          color: #F85C70; }
+      .services .container .servicesCard .servicesContent {
+        margin-top: 2rem; }
+        .services .container .servicesCard .servicesContent h2 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem; }
+        .services .container .servicesCard .servicesContent p {
+          font-size: 1rem;
+          color: #6d6d6d; }
+
+.pricing {
+  margin: 0 8rem; }
+  .pricing .headerPricing {
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem; }
+    .pricing .headerPricing h1 {
+      font-size: 2rem; }
+    .pricing .headerPricing h1 span {
+      color: #F85C70; }
+  .pricing .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem; }
+    .pricing .container .cardPricing {
+      text-align: center;
+      border: 1px solid #acacac;
+      padding: 2rem 1rem;
+      position: relative; }
+      .pricing .container .cardPricing h2 {
+        margin-bottom: 2rem;
+        font-weight: 500; }
+      .pricing .container .cardPricing .price {
+        position: relative; }
+        .pricing .container .cardPricing .price sup {
+          position: relative;
+          font-size: 1.2rem;
+          top: -2.5rem;
+          left: .5rem; }
+        .pricing .container .cardPricing .price .num {
+          font-size: 3.5rem;
+          font-weight: 700; }
+        .pricing .container .cardPricing .price .date {
+          color: #6d6d6d; }
+      .pricing .container .cardPricing .detail {
+        margin: 2rem 0;
+        color: #6d6d6d; }
+      .pricing .container .cardPricing .button {
+        padding: .5rem 2.5rem;
+        background-color: #F85C70;
+        color: #ffffff;
+        border: none;
+        border-radius: 50px;
+        transition: all .3s ease-in-out;
+        opacity: 0.8; }
+        .pricing .container .cardPricing .button:hover {
+          opacity: 1; }
+  .pricing .cardPricing:nth-child(3) {
+    padding: 5rem 0;
+    overflow: hidden; }
+    .pricing .cardPricing:nth-child(3)::after {
+      content: 'New';
+      position: absolute;
+      right: -3rem;
+      top: 10px;
+      transform: rotate(45deg);
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #F85C70;
+      padding: .5rem 2rem;
+      width: 150px; }
+
+.hire {
+  background-color: #1b1b1b;
+  width: 100%;
+  height: auto;
+  margin: 5rem;
+  padding: 3rem 0; }
+  .hire .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .hire .container .hireText {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 2rem; }
+    .hire .container .button {
+      padding: .5rem 2.5rem;
+      background-color: #F85C70;
+      border-radius: 5px;
+      opacity: 0.9; }
+      .hire .container .button:hover {
+        opacity: 1; }

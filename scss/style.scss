@@ -313,14 +313,15 @@ $colorFontNav: #1b1b1b;
 
                     .skills {
 
-                        .skillProgress {
+                        .subject h3 {
+                            font-size: 1.2rem;
+                            color: #6d6d6d;
+                        }
+                        .progress {
                             margin-bottom: .5rem;
+                            height: 5px;
 
-                            h3 {
-                                font-size: 1.2rem;
-                                color: #6d6d6d;
-                            }
-                            .progress {
+                            .progress-bar {
                                 height: 5px;
                                 background-color: $red;
                                 width: 95%;
@@ -333,3 +334,220 @@ $colorFontNav: #1b1b1b;
     }
 }
 
+
+// Achievement Section
+.achievement {
+    background-color: $colorFontNav;
+    width: 100%;
+    height: auto;
+    margin: 4rem 0;
+
+    .achievementContain {
+        margin: 0 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .achieveCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .achieveIcon {
+            padding: 2rem 0;
+
+            i {
+                color: $white;
+                font-size: 5rem;
+                border-right: 1px solid $white;
+                padding: 2rem 0;
+                padding-right: 1.5rem;
+            }
+        }
+        .achieveTotal {
+            margin-left: 1.5rem;
+
+            h1 {
+                color: $red;
+                margin-bottom: .5rem;
+            }
+            p {
+                color: #b4b4b4;
+            }
+        }
+    }
+}
+
+// Section Service 
+.services {
+    margin: 0 8rem;
+
+    .headerServices {
+        margin-bottom: 4.5rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+        h1 span {
+            color: $red;
+        }
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+
+        .servicesCard {
+            position: relative;
+            padding: 1.5rem 2rem 1.5rem 1.5rem;
+            border: 1px solid #acacac;
+            margin-bottom: 2rem;
+
+            .iconServices {
+                position: absolute;
+                top: -1.5rem;
+                background-color: $white;
+                padding: .5rem;
+
+                i {
+                    font-size: 2rem;
+                    color: $red;
+                }
+            }
+            .servicesContent {
+                margin-top: 2rem;
+
+                h2 {
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-size: 1rem;
+                    color: #6d6d6d;
+                }
+            }
+        }
+    }
+}
+
+// Section Pricing
+.pricing {
+    margin: 0 8rem;
+
+    .headerPricing {
+        margin-top: 4.5rem;
+        margin-bottom: 2.5rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+        h1 span {
+            color: $red;
+        }
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
+
+        .cardPricing {
+            text-align: center;
+            border: 1px solid #acacac;
+            padding: 2rem 1rem;
+            position: relative;
+
+            h2 {
+                margin-bottom: 2rem;
+                font-weight: 500;
+            }
+            .price {
+                position: relative;
+
+                sup {
+                    position: relative;
+                    font-size: 1.2rem;
+                    top: -2.5rem;
+                    left: .5rem;
+                }
+                .num {
+                    font-size: 3.5rem;
+                    font-weight: 700;
+                }
+                .date {
+                    color: #6d6d6d;
+                }
+            }
+            .detail {
+                margin: 2rem 0;
+                color: #6d6d6d;
+            }
+            .button {
+                padding: .5rem 2.5rem;
+                background-color: $red;
+                color: $white;
+                border: none;
+                border-radius: 50px;
+                transition: all .3s ease-in-out;
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .cardPricing:nth-child(3) {
+        padding: 5rem 0;
+        overflow: hidden;
+
+        &::after {
+            content: 'New';
+            position: absolute;
+            right: -3rem;
+            top: 10px;
+            transform: rotate(45deg);
+            font-size: 1rem;
+            color: $white;
+            background-color: $red;
+            padding: .5rem 2rem;
+            width: 150px;
+        }
+    }
+}
+
+// Section Hire
+.hire {
+    background-color: $colorFontNav;
+    width: 100%;
+    height: auto;
+    margin: 5rem;
+    padding: 3rem 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hireText {
+            font-size: 2rem;
+            color: $white;
+            margin-bottom: 2rem;
+        }
+        .button {
+            padding: .5rem 2.5rem;
+            background-color: $red;
+            border-radius: 5px;
+            opacity: 0.9;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
