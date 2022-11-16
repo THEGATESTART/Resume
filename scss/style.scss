@@ -525,7 +525,7 @@ $colorFontNav: #1b1b1b;
     background-color: $colorFontNav;
     width: 100%;
     height: auto;
-    margin: 5rem;
+    margin: 5rem 0;
     padding: 3rem 0;
 
     .container {
@@ -533,6 +533,7 @@ $colorFontNav: #1b1b1b;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 100%;
 
         .hireText {
             font-size: 2rem;
@@ -550,4 +551,143 @@ $colorFontNav: #1b1b1b;
             }
         }
     }
+}
+
+// Section Portfolio
+.portfolio {
+    margin: 0 8rem;
+
+    .headerPortfolio {
+        margin-top: 4.5rem;
+        margin-bottom: 2.5rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+        h1 span {
+            color: $red;
+        }
+    }
+    .navPortfolio {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        li {
+            list-style: none;
+            border-bottom: 1px solid #969696;
+            padding-right: 2rem;
+            padding-bottom: 1rem;
+        }
+        li a {
+            text-decoration: none;
+            color: #6d6d6d;
+            padding: .5rem 1rem;
+        }
+        li a.active {
+            color: $white;
+            background-color: $red;
+        }
+    }
+    .containerPort {
+        grid-template-columns: 1fr;
+
+        .gallery {
+            width: 100%;
+            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+            gap: 2rem;
+
+            .imageBox {
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                max-width: 100%;
+                
+
+                img {
+                    background-position: center;
+                    background-size: cover;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $red;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all .2s ease-in-out;
+
+                    .title {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        font-size: 1.8rem;
+                        color: $white;
+                        font-weight: 700;
+                        transform: translate(-50%, -50%);
+                        padding-bottom: 4.2rem;
+                    }
+                    .detail {
+                        font-size: 1rem;
+                        color: $white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                    }
+                }
+            }
+            .imageBox:hover .overlay {
+                opacity: 0.7;
+            }
+        }
+        .gallery {
+            display: none;
+        }
+        .gallery.active {
+            display: grid;
+        }
+        #new .imageBox:nth-child(1){
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        #new .imageBox:nth-child(2n){
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        #new .imageBox:nth-child(5n){
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        #new .imageBox:nth-child(3){
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        #advertising .imageBox:nth-child(odd){
+            grid-column: span 2;
+        }
+        #branding .imageBox:nth-child(3n+1){
+            grid-row: span 2;
+        }
+        #web .imageBox:nth-child(4){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+    }
+}
+
+// Section News
+.news {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
