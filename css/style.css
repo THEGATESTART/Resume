@@ -444,10 +444,17 @@
             width: 100%; }
       .portfolio .containerPort .gallery .imageBox:hover .overlay {
         opacity: 0.7; }
-    .portfolio .containerPort .gallery {
+    .portfolio .containerPort .gallery.hide {
       display: none; }
     .portfolio .containerPort .gallery.active {
-      display: grid; }
+      display: grid;
+      animation: animate .6s ease-in-out; }
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
     .portfolio .containerPort #new .imageBox:nth-child(1) {
       grid-column: span 2;
       grid-row: span 2; }
@@ -469,5 +476,56 @@
       grid-column: span 2; }
 
 .news {
-  margin-top: 5rem;
-  margin-bottom: 2rem; }
+  margin: 0 8rem; }
+  .news .headerNews {
+    margin-top: 10rem;
+    margin-bottom: 4rem; }
+    .news .headerNews h1 {
+      font-size: 2rem; }
+    .news .headerNews h1 span {
+      color: #F85C70; }
+  .news .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    .news .container .newsCard {
+      display: grid;
+      grid-template-columns: 450px 1fr;
+      align-items: center;
+      border: 1px solid #dee2e6; }
+      .news .container .newsCard .image {
+        width: 100%;
+        height: 100%; }
+        .news .container .newsCard .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          background-size: cover; }
+      .news .container .newsCard .content {
+        padding: 1.5rem; }
+        .news .container .newsCard .content .newSubject {
+          font-size: 2.3rem;
+          color: #1b1b1b;
+          font-weight: 700; }
+        .news .container .newsCard .content .review {
+          display: flex;
+          color: #969696;
+          cursor: pointer; }
+          .news .container .newsCard .content .review .reviews {
+            padding-right: 1rem; }
+          .news .container .newsCard .content .review .heart {
+            padding-right: 1rem; }
+            .news .container .newsCard .content .review .heart i {
+              color: #F85C70; }
+        .news .container .newsCard .content .textReview {
+          font-size: 1.2rem;
+          color: #969696; }
+        .news .container .newsCard .content .textMark {
+          font-size: 1.2rem; }
+        .news .container .newsCard .content .more {
+          text-decoration: none;
+          color: #F85C70;
+          cursor: pointer; }
+
+.contact {
+  margin-top: 5rem; }
