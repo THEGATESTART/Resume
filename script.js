@@ -1,3 +1,20 @@
+//Scroll Fuction
+const imageRound = document.querySelector('.imageRouded');
+const profilename = document.querySelector('.profileName');
+const navbar = document.querySelector('.navBar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 550) {
+        imageRound.classList.add("hide");
+        profilename.classList.add("show");
+        navbar.style.position = "sticky";
+    } else {
+        imageRound.classList.remove("hide");
+        profilename.classList.remove("show");
+    }
+  console.log(window.scrollY); 
+});
+
 // Alternate Fuction
 const navPort = document.querySelector(".navPortfolio");
 const myPort = document.querySelectorAll(".gallery");

@@ -58,6 +58,9 @@
   width: 100%;
   height: 4.5rem;
   position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px; }
   .navBar .navContainer {
     display: flex;
@@ -81,22 +84,57 @@
       position: relative;
       top: -1.9rem;
       z-index: 1; }
-      .navBar .navContainer .profileImage .imgeRouded {
-        background-color: #ffffff; }
+      .navBar .navContainer .profileImage .imageRouded {
+        position: relative;
+        left: -1.6rem;
+        animation: fadeInDown .8s; }
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+      .navBar .navContainer .profileImage .imageRouded.hide {
+        animation: fadeOutUp .8s forwards; }
+
+@keyframes fadeOutUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0; } }
       .navBar .navContainer .profileImage img {
         border: 0.5rem solid #ffffff;
         border-radius: 50%;
         width: 10rem;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; }
       .navBar .navContainer .profileImage .profileName {
+        position: absolute;
+        top: 0;
         text-align: center;
         color: #1b1b1b;
-        display: none; }
+        margin-top: 2.5rem; }
+      .navBar .navContainer .profileImage .profileName {
+        opacity: 0; }
+      .navBar .navContainer .profileImage .profileName.show {
+        animation: fadeInDown .8s forwards; }
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
       .navBar .navContainer .profileImage .name {
-        font-size: 1.8rem;
-        font-weight: 500; }
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0; }
       .navBar .navContainer .profileImage .job {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 300; }
     .navBar .navContainer .rightMenu {
       display: flex;
@@ -390,7 +428,8 @@
     .portfolio .navPortfolio li a {
       text-decoration: none;
       color: #6d6d6d;
-      padding: .5rem 1rem; }
+      padding: .5rem 1rem;
+      cursor: pointer; }
     .portfolio .navPortfolio li a.active {
       color: #ffffff;
       background-color: #F85C70; }
@@ -452,7 +491,7 @@
 
 @keyframes animate {
   0% {
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   100% {
     transform: scale(1); } }
     .portfolio .containerPort #new .imageBox:nth-child(1) {
@@ -528,4 +567,88 @@
           cursor: pointer; }
 
 .contact {
-  margin-top: 5rem; }
+  margin-top: 10em;
+  display: flex;
+  align-items: center;
+  height: 45rem; }
+  .contact iframe {
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    z-index: 0; }
+  .contact .container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 0 8rem 0 8rem;
+    position: relative;
+    z-index: 1; }
+    .contact .container .formContact {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 2px; }
+      .contact .container .formContact h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem; }
+      .contact .container .formContact h1 span {
+        border-bottom: 2px solid #F85C70;
+        padding-bottom: .6rem; }
+      .contact .container .formContact input {
+        width: 100%;
+        padding: .8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        outline: none;
+        border-color: #bebdbd; }
+      .contact .container .formContact textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        outline: none;
+        border-color: #bebdbd; }
+      .contact .container .formContact button {
+        background-color: #F85C70;
+        border-radius: 5px;
+        color: #ffffff;
+        padding: .5rem 0;
+        border: none; }
+        .contact .container .formContact button:hover {
+          opacity: 0.9; }
+    .contact .container .contactInfo {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      border-radius: 2px;
+      padding: 2.5rem; }
+      .contact .container .contactInfo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem; }
+      .contact .container .contactInfo h1 span {
+        border-bottom: 2px solid #F85C70;
+        padding-bottom: .6rem; }
+      .contact .container .contactInfo .content {
+        display: flex;
+        margin-bottom: 1.5rem; }
+        .contact .container .contactInfo .content .icon {
+          padding-right: 1rem;
+          font-size: 1.5rem; }
+      .contact .container .contactInfo .social {
+        font-size: 1.5rem; }
+        .contact .container .contactInfo .social i {
+          margin-right: 1.5rem;
+          cursor: pointer; }
+
+.footer {
+  background-color: #17263c;
+  height: 3rem; }
+  .footer .copyright {
+    margin: 0 9rem;
+    color: #ffffff;
+    padding-top: 1rem;
+    font-size: .8rem; }

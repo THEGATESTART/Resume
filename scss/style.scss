@@ -84,6 +84,9 @@ $colorFontNav: #1b1b1b;
     width: 100%;
     height: 4.5rem;
     position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px;
 
     .navContainer {
@@ -115,8 +118,33 @@ $colorFontNav: #1b1b1b;
             top: -1.9rem;
             z-index: 1;
 
-            .imgeRouded {
-                background-color: $white;
+            .imageRouded {
+                position: relative;
+                left: -1.6rem;
+                animation: fadeInDown .8s;
+            }
+            @keyframes fadeInDown {
+                0% {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            .imageRouded.hide {
+                animation: fadeOutUp .8s forwards;
+            }
+            @keyframes fadeOutUp {
+                0% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
             }
             img {
                 border: .5rem solid $white;
@@ -126,16 +154,35 @@ $colorFontNav: #1b1b1b;
             }
 
             .profileName {
+                position: absolute;
+                top: 0;
                 text-align: center;
                 color: $colorFontNav;
-                display: none;
+                margin-top: 2.5rem;
+            }
+            .profileName {
+                opacity: 0;
+            }
+            .profileName.show {
+                animation: fadeInDown .8s forwards;
+            }
+            @keyframes fadeInDown {
+                0% {
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
             }
             .name {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 font-weight: 500;
+                margin: 0;
             }
             .job {
-                font-size: 1.3rem;
+                font-size: 1rem;
                 font-weight: 300;
             }
 
@@ -583,6 +630,7 @@ $colorFontNav: #1b1b1b;
             text-decoration: none;
             color: #6d6d6d;
             padding: .5rem 1rem;
+            cursor: pointer;
         }
         li a.active {
             color: $white;
@@ -660,7 +708,7 @@ $colorFontNav: #1b1b1b;
         }
         @keyframes animate {
             0% {
-                transform: scale(0.5);
+                transform: scale(0.7);
             } 
             100% {
                 transform: scale(1);
@@ -776,5 +824,117 @@ $colorFontNav: #1b1b1b;
 
 // Section Contact
 .contact {
-    margin-top: 5rem;
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+    height: 45rem;
+
+    iframe {
+        width: 100%;
+        height: 45rem;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin: 0 8rem 0 8rem;
+        position: relative;
+        z-index: 1;
+
+        .formContact {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            padding: 1.5rem;
+            border-radius: 2px;
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            h1 span {
+                border-bottom: 2px solid $red;
+                padding-bottom: .6rem;
+            }
+            input {
+                width: 100%;
+                padding: .8rem;
+                margin-bottom: 1rem;
+                border: 1px solid #dee2e6;
+                border-radius: 5px;
+                outline: none;
+                border-color: #bebdbd;
+            }
+            textarea {
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 0.8rem;
+                border: 1px solid #dee2e6;
+                border-radius: 5px;
+                outline: none;
+                border-color: #bebdbd;
+            }
+            button {
+                background-color: $red;
+                border-radius: 5px;
+                color: $white;
+                padding: .5rem 0;
+                border: none;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+        .contactInfo {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            border-radius: 2px;
+            padding: 2.5rem;
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 2.5rem;
+            }
+            h1 span {
+                border-bottom: 2px solid $red;
+                padding-bottom: .6rem;
+            }
+            .content {
+                display: flex;
+                margin-bottom: 1.5rem;
+
+                .icon {
+                    padding-right: 1rem;
+                    font-size: 1.5rem;
+                }
+            }
+            .social {
+                font-size: 1.5rem;
+                
+                i {
+                    margin-right: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    background-color: #17263c;
+    height: 3rem;
+
+    .copyright {
+        margin: 0 9rem;
+        color: $white;
+        padding-top: 1rem;
+        font-size: .8rem;
+    }
 }
