@@ -142,6 +142,9 @@
       gap: 3rem;
       margin-top: 1.5rem; }
 
+.responsive {
+  display: none; }
+
 .about {
   width: 100%;
   height: 30rem; }
@@ -652,3 +655,292 @@
     color: #ffffff;
     padding-top: 1rem;
     font-size: .8rem; }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url(/img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover; }
+    .hero .containerHero {
+      margin: 0 3rem; }
+  .responsive {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px; }
+    .responsive .hamberger {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer; }
+      .responsive .hamberger i {
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        font-size: 1.5rem;
+        margin: .5rem;
+        border-radius: 5px; }
+    .responsive .container {
+      display: none;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: .8rem;
+      margin: 0 1rem;
+      padding-bottom: 1rem; }
+      .responsive .container li {
+        list-style: none; }
+      .responsive .container a {
+        text-decoration: none;
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        font-weight: 700; }
+      .responsive .container a.active {
+        color: #F85C70; }
+    .responsive .toggle {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: .8rem;
+      margin: 0 1rem;
+      padding-bottom: 1rem;
+      opacity: 1;
+      transition: all .5s ease-in-out; }
+      .responsive .toggle li {
+        list-style: none; }
+      .responsive .toggle a {
+        text-decoration: none;
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        font-weight: 700; }
+      .responsive .toggle a.active {
+        color: #F85C70; }
+  .navBar {
+    display: none; }
+  .about {
+    width: 100%;
+    height: auto; }
+    .about .aboutContainer {
+      display: grid;
+      grid-template-columns: 1fr; }
+  .resume {
+    margin-top: 5rem; }
+    .resume .resumeContainer {
+      margin: 0 2rem; }
+      .resume .resumeContainer .resumeCard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem; }
+      .resume .resumeContainer .contentResume:nth-child(3) {
+        grid-column: span 2; }
+  .achievement {
+    background-color: #1b1b1b;
+    width: 100%;
+    height: auto;
+    margin: 4rem 0; }
+    .achievement .achievementContain {
+      margin: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+  .services {
+    margin: 0 2rem; }
+  .pricing {
+    margin: 0 2rem; }
+    .pricing .container {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr; }
+  .portfolio {
+    margin: 0 2rem; }
+    .portfolio .containerPort {
+      grid-template-columns: 1fr; }
+      .portfolio .containerPort .gallery {
+        width: 100%;
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .news {
+    margin: 0 2rem; }
+    .news .container .newsCard {
+      grid-template-columns: 1fr; }
+      .news .container .newsCard .content {
+        padding: 1.5rem; }
+        .news .container .newsCard .content .newSubject {
+          font-size: 1.8rem; }
+        .news .container .newsCard .content .textReview {
+          font-size: 1rem; }
+        .news .container .newsCard .content .textMark {
+          font-size: 1rem; }
+  .contact {
+    margin-top: 5em; }
+    .contact iframe {
+      height: 60rem; }
+    .contact .container {
+      grid-template-columns: 1fr;
+      margin: 0 3rem 0 3rem; }
+  .footer {
+    background-color: #17263c;
+    height: 3rem;
+    position: relative;
+    margin-top: 7.5rem; }
+    .footer .copyright {
+      margin: 0 3rem;
+      color: #ffffff;
+      padding-top: 1rem;
+      font-size: .8rem; } }
+
+@media screen and (min-width: 392px) and (max-width: 768px) {
+  .hero {
+    height: 80vh; }
+    .hero .containerHero {
+      margin: 0 2rem; }
+      .hero .containerHero .social {
+        justify-content: center; }
+      .hero .containerHero .heroText {
+        top: 30%; }
+        .hero .containerHero .heroText h3 {
+          font-size: 2.8rem; }
+        .hero .containerHero .heroText h1 {
+          font-size: 5rem;
+          line-height: 1; }
+        .hero .containerHero .heroText h5 {
+          font-size: 1.2rem; }
+  .responsive {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px; }
+    .responsive .hamberger {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer; }
+      .responsive .hamberger i {
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        font-size: 1.5rem;
+        margin: .5rem;
+        border-radius: 5px; }
+    .responsive .container {
+      display: none;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: .8rem;
+      margin: 0 1rem;
+      padding-bottom: 1rem; }
+      .responsive .container li {
+        list-style: none; }
+      .responsive .container a {
+        text-decoration: none;
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        font-weight: 700; }
+      .responsive .container a.active {
+        color: #F85C70; }
+    .responsive .toggle {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: .8rem;
+      margin: 0 1rem;
+      padding-bottom: 1rem;
+      opacity: 1;
+      transition: all .5s ease-in-out; }
+      .responsive .toggle li {
+        list-style: none; }
+      .responsive .toggle a {
+        text-decoration: none;
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        font-weight: 700; }
+      .responsive .toggle a.active {
+        color: #F85C70; }
+  .navBar {
+    display: none; }
+  .about {
+    width: 100%;
+    height: auto; }
+    .about .aboutContainer {
+      display: grid;
+      grid-template-columns: 1fr; }
+  .resume {
+    margin-top: 5rem; }
+    .resume .resumeContainer {
+      margin: 0 1rem; }
+      .resume .resumeContainer .resumeCard {
+        grid-template-columns: 1fr; }
+  .achievement {
+    margin: 4rem 0; }
+    .achievement .achievementContain {
+      margin: 0 2rem;
+      grid-template-columns: 1fr;
+      gap: 1rem; }
+      .achievement .achievementContain .servicesCard {
+        position: relative;
+        padding: 1.5rem; }
+  .services {
+    margin: 0 1rem; }
+    .services .container {
+      grid-template-columns: 1fr; }
+  .pricing {
+    margin: 0 1rem; }
+    .pricing .container {
+      grid-template-columns: 1fr; }
+  .portfolio {
+    margin: 0 1rem; }
+    .portfolio .navPortfolio li {
+      padding-right: 1rem; }
+    .portfolio .navPortfolio li a {
+      padding: .5rem .5rem; }
+    .portfolio .containerPort {
+      grid-template-columns: 1fr; }
+      .portfolio .containerPort .gallery {
+        width: 100%;
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .hire .container .hireText {
+    font-size: 1.5rem; }
+  .news {
+    margin: 0 1rem; }
+    .news .container .newsCard {
+      grid-template-columns: 1fr; }
+      .news .container .newsCard .content {
+        padding: 1.5rem; }
+        .news .container .newsCard .content .newSubject {
+          font-size: 1.8rem; }
+        .news .container .newsCard .content .textReview {
+          font-size: 1rem; }
+        .news .container .newsCard .content .textMark {
+          font-size: 1rem; }
+  .contact {
+    margin-top: 18em; }
+    .contact iframe {
+      height: 65rem; }
+    .contact .container {
+      grid-template-columns: 1fr;
+      margin: 0 1rem 0 1rem; }
+      .contact .container .contactInfo {
+        padding: 2rem; }
+        .contact .container .contactInfo .social {
+          font-size: 1.5rem; }
+          .contact .container .contactInfo .social i {
+            margin-right: 1.4rem;
+            cursor: pointer; }
+  .footer {
+    background-color: #17263c;
+    height: 3rem;
+    position: relative;
+    margin-top: 10rem; }
+    .footer .copyright {
+      margin: 0 3rem;
+      color: #ffffff;
+      padding-top: 1rem;
+      font-size: .8rem; } }

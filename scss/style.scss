@@ -16,7 +16,8 @@ $colorFontNav: #1b1b1b;
     width: 100%;
     height: 80vh;
     background: url(/img/header.jpg);
-    background-repeat: no-repeat;background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .containerHero {
         margin: 0 10rem;
@@ -195,6 +196,11 @@ $colorFontNav: #1b1b1b;
             margin-top: 1.5rem;
         }
     }
+}
+
+// Responsive Nav
+.responsive {
+    display: none;
 }
 
 // Section About
@@ -654,7 +660,6 @@ $colorFontNav: #1b1b1b;
                 max-width: 100%;
                 max-width: 100%;
                 
-
                 img {
                     background-position: center;
                     background-size: cover;
@@ -936,5 +941,495 @@ $colorFontNav: #1b1b1b;
         color: $white;
         padding-top: 1rem;
         font-size: .8rem;
+    }
+}
+//Media query for tablet
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    // Section Hero
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        background: url(/img/header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+
+        .containerHero {
+            margin: 0 3rem;
+        }
+    }
+
+    // Section Nav Responsive
+    .responsive {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: $white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px;
+        
+        .hamberger {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            i {
+                padding: 1rem;
+                border: 1px solid #dee2e6;
+                font-size: 1.5rem;
+                margin: .5rem;
+                border-radius: 5px;
+            }
+        }
+
+        .container {
+            display: none;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: .8rem;
+            margin: 0 1rem;
+            padding-bottom: 1rem;
+            
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: $colorFontNav;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+            a.active {
+                color: $red;
+            }            
+        }
+        .toggle {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: .8rem;
+            margin: 0 1rem;
+            padding-bottom: 1rem;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: $colorFontNav;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+            a.active {
+                color: $red;
+            }           
+        }
+    }
+    .navBar {
+        display: none;
+    }
+
+// Section About
+.about {
+    width: 100%;
+    height: auto;
+
+    .aboutContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+// Section Resume
+.resume {
+    margin-top: 5rem;
+
+    .resumeContainer {
+        margin: 0 2rem;
+
+        .resumeCard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .contentResume:nth-child(3) {
+            grid-column: span 2;
+        }
+    }
+}
+
+// Achievement Section
+.achievement {
+    background-color: $colorFontNav;
+    width: 100%;
+    height: auto;
+    margin: 4rem 0;
+
+    .achievementContain {
+        margin: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Section Service 
+.services {
+    margin: 0 2rem;
+}
+
+// Section Pricing
+.pricing {
+    margin: 0 2rem;
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Section Portfolio
+.portfolio {
+    margin: 0 2rem;
+
+    .containerPort {
+        grid-template-columns: 1fr;
+
+        .gallery {
+            width: 100%;
+            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+    }
+}
+
+// Section News
+.news {
+    margin: 0 2rem;
+
+    .container {
+
+        .newsCard {
+            grid-template-columns: 1fr;
+            
+            .content {
+                padding: 1.5rem;
+
+                .newSubject {
+                    font-size: 1.8rem;
+                }
+                
+                .textReview {
+                    font-size: 1rem;
+                }
+                .textMark {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Section Contact
+.contact {
+    margin-top: 5em;
+
+    iframe {
+        height: 60rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0 3rem 0 3rem;
+    }
+}
+
+// Footer
+.footer {
+    background-color: #17263c;
+    height: 3rem;
+    position: relative;
+    margin-top: 7.5rem;
+
+    .copyright {
+        margin: 0 3rem;
+        color: $white;
+        padding-top: 1rem;
+        font-size: .8rem;
+    }
+}
+}
+
+//Responsive for mobile divice
+@media screen and (min-width: 392px) and (max-width: 768px) {
+        // Section Hero
+        .hero {
+            height: 80vh;
+    
+            .containerHero {
+                margin: 0 2rem;
+
+                .social {
+                    justify-content: center;
+                }
+                .heroText {
+                    top: 30%;
+        
+                    h3 {
+                        font-size: 2.8rem;
+                    }
+                    h1 {
+                        font-size: 5rem;
+                        line-height: 1;
+                   }
+                   h5 {
+                        font-size: 1.2rem;
+                   }
+                } 
+            }
+        }
+    
+        // Section Nav Responsive
+        .responsive {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: $white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 16px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px;
+            
+            .hamberger {
+                display: flex;
+                justify-content: flex-end;
+                cursor: pointer;
+    
+                i {
+                    padding: 1rem;
+                    border: 1px solid #dee2e6;
+                    font-size: 1.5rem;
+                    margin: .5rem;
+                    border-radius: 5px;
+                }
+            }
+    
+            .container {
+                display: none;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: .8rem;
+                margin: 0 1rem;
+                padding-bottom: 1rem;
+                
+                li {
+                    list-style: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: $colorFontNav;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                a.active {
+                    color: $red;
+                }            
+            }
+            .toggle {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: .8rem;
+                margin: 0 1rem;
+                padding-bottom: 1rem;
+                opacity: 1;
+                transition: all .5s ease-in-out;
+    
+                li {
+                    list-style: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: $colorFontNav;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                a.active {
+                    color: $red;
+                }           
+            }
+        }
+        .navBar {
+            display: none;
+        }
+    
+    // Section About
+    .about {
+        width: 100%;
+        height: auto;
+    
+        .aboutContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    // Section Resume
+    .resume {
+        margin-top: 5rem;
+    
+        .resumeContainer {
+            margin: 0 1rem;
+    
+            .resumeCard {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    
+    // Achievement Section
+    .achievement {
+        margin: 4rem 0;
+    
+        .achievementContain {
+            margin: 0 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            .servicesCard {
+                position: relative;
+                padding: 1.5rem;
+            }
+        }
+    }
+    
+    // Section Service 
+    .services {
+        margin: 0 1rem;
+
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    // Section Pricing
+    .pricing {
+        margin: 0 1rem;
+    
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    // Section Portfolio
+    .portfolio {
+        margin: 0 1rem;
+        
+        .navPortfolio {
+    
+            li {
+                padding-right: 1rem;
+            }
+            li a {
+                padding: .5rem .5rem;
+            }
+        }
+
+        .containerPort {
+            grid-template-columns: 1fr;
+    
+            .gallery {
+                width: 100%;
+                position: relative;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+    }
+
+    // Section Hire
+    .hire {
+
+        .container {
+
+            .hireText {
+                font-size: 1.5rem;
+
+            }
+        }
+    }
+    
+    // Section News
+    .news {
+        margin: 0 1rem;
+    
+        .container {
+    
+            .newsCard {
+                grid-template-columns: 1fr;
+                
+                .content {
+                    padding: 1.5rem;
+    
+                    .newSubject {
+                        font-size: 1.8rem;
+                    }
+                    
+                    .textReview {
+                        font-size: 1rem;
+                    }
+                    .textMark {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Section Contact
+    .contact {
+        margin-top: 18em;
+    
+        iframe {
+            height: 65rem;
+        }
+    
+        .container {
+            grid-template-columns: 1fr;
+            margin: 0 1rem 0 1rem;
+
+            .contactInfo {
+            padding: 2rem;
+
+            .social {
+                font-size: 1.5rem;
+                
+                i {
+                    margin-right: 1.4rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        }
+    }
+    
+    // Footer
+    .footer {
+        background-color: #17263c;
+        height: 3rem;
+        position: relative;
+        margin-top: 10rem;
+    
+        .copyright {
+            margin: 0 3rem;
+            color: $white;
+            padding-top: 1rem;
+            font-size: .8rem;
+        }
     }
 }

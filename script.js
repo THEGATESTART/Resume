@@ -12,8 +12,25 @@ window.addEventListener('scroll', () => {
         imageRound.classList.remove("hide");
         profilename.classList.remove("show");
     }
-  console.log(window.scrollY); 
 });
+
+//hamberger toggle when click
+const hamberger = document.querySelector('.hamberger');
+const container = document.querySelector('.container');
+
+hamberger.addEventListener('click', () => {
+    container.classList.toggle('toggle');
+});
+
+//Active nav menu when click
+const navMenu = document.querySelector('.container');
+
+navMenu.onclick = (menu) => {
+    if(menu.target.classList.contains('menu')) {
+        navMenu.querySelector('.active').classList.remove('active');
+        menu.target.classList.add('active');
+    }
+}
 
 // Alternate Fuction
 const navPort = document.querySelector(".navPortfolio");
